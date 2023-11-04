@@ -1,10 +1,11 @@
 
+
 import os 
 from PIL import Image
 from torch.utils.data import Dataset 
 import  numpy as np
 
-class CaravanaDataset(Dataset): 
+class CarvanaDataset(Dataset): 
     def __init__(self, image_dir, mask_dir, transform=None): 
         self.image_dir = image_dir 
         self.masks_dir = mask_dir 
@@ -27,3 +28,9 @@ class CaravanaDataset(Dataset):
             mask = augmentations["mask"]
         
         return image, mask 
+
+
+
+
+
+
