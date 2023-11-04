@@ -1,3 +1,4 @@
+
 import torch
 import torchvision 
 from unet_dataset_aladin import CarvanaDataset 
@@ -45,7 +46,7 @@ def get_loaders(
     )
     return train_loader, val_loader 
 
-def check_accuracy(loader, model, device="cude"): 
+def check_accuracy(loader, model, device="cuda"): 
     num_correct = 0 
     num_pixels = 0 
     dice_score = 0
@@ -89,6 +90,9 @@ def save_predictions_as_imgs(
         torchvision.utils.save_image(y.unsqueeze(1), f"{folder}{idx}.png")
 
     model.train()
+
+
+
 
 
 
